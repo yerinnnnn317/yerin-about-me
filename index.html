@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정예린 | About Me</title>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+    color: #263238;
+    background: #f7f8f5;
+    line-height: 1.7;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1050px; margin: 0 auto; padding: 0 28px; }
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(247,248,245,.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e3e7e2;
+  }
+  nav {
+    height: 64px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-weight: 800; letter-spacing: .04em; }
+  .navlinks { display: flex; gap: 22px; font-size: 14px; color: #66736d; }
+  .navlinks a:hover { color: #2f716d; }
+
+  .hero {
+    min-height: 680px;
+    display: grid; grid-template-columns: 1.1fr .9fr;
+    gap: 50px; align-items: center;
+    padding: 85px 0 75px;
+  }
+  .eyebrow { color: #2f716d; font-weight: 700; font-size: 14px; margin-bottom: 12px; }
+  h1 { font-size: clamp(48px, 7vw, 82px); line-height: 1.05; margin: 0 0 24px; letter-spacing: -.06em; }
+  .hero p { font-size: 19px; color: #65716c; max-width: 580px; }
+  .tagline {
+    display: inline-block; margin-top: 16px; padding: 10px 16px;
+    border-radius: 999px; background: #e4f0ed; color: #2f716d; font-weight: 700;
+  }
+  .profile-card {
+    background: white; border: 1px solid #e1e6e2; border-radius: 28px;
+    padding: 34px; box-shadow: 0 18px 45px rgba(39,60,53,.07);
+  }
+  .avatar {
+    width: 112px; height: 112px; border-radius: 50%;
+    background: #dcebe7; display: grid; place-items: center;
+    font-size: 43px; margin-bottom: 24px;
+  }
+  .profile-card h2 { margin: 0 0 5px; font-size: 27px; }
+  .profile-card .sub { color: #718079; margin-bottom: 24px; }
+  .info { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+  .info div { background: #f7f9f7; padding: 13px 15px; border-radius: 14px; }
+  .info b { display: block; font-size: 12px; color: #819089; margin-bottom: 2px; }
+  section { padding: 85px 0; }
+  .section-title { font-size: 34px; letter-spacing: -.04em; margin: 0 0 10px; }
+  .section-desc { color: #75817c; margin: 0 0 34px; }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  .card {
+    background: white; border: 1px solid #e2e7e3; border-radius: 22px;
+    padding: 26px; box-shadow: 0 8px 24px rgba(39,60,53,.04);
+  }
+  .icon { font-size: 28px; margin-bottom: 12px; }
+  .card h3 { margin: 0 0 8px; font-size: 20px; }
+  .card p { margin: 0; color: #68756f; }
+  .story {
+    display: grid; grid-template-columns: .7fr 1.3fr; gap: 35px; align-items: start;
+  }
+  .quote {
+    font-size: 28px; line-height: 1.45; font-weight: 800;
+    letter-spacing: -.04em; color: #315f5a;
+    background: #eaf2ef; border-radius: 25px; padding: 34px;
+  }
+  .story-text { color: #596760; font-size: 17px; }
+  .story-text p { margin-top: 0; margin-bottom: 18px; }
+  .pill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .pill { background: #f0f3f0; border-radius: 999px; padding: 8px 13px; font-size: 14px; }
+  .interest {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+  }
+  .interest .card { min-height: 190px; }
+  .goal {
+    background: #253d39; color: white; border-radius: 30px; padding: 48px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 45px;
+  }
+  .goal h2 { font-size: 36px; line-height: 1.25; margin: 0 0 16px; letter-spacing: -.04em; }
+  .goal p { color: #d5e1de; }
+  .goal ul { margin: 0; padding-left: 20px; color: #e0e9e7; }
+  footer { padding: 45px 0 65px; text-align: center; color: #8a9590; font-size: 14px; }
+
+  @media (max-width: 760px) {
+    .navlinks { display: none; }
+    .hero, .story, .goal { grid-template-columns: 1fr; }
+    .hero { padding-top: 55px; }
+    .grid, .interest { grid-template-columns: 1fr; }
+    .goal { padding: 32px; }
+    .info { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="logo">YERIN'S PAGE</div>
+      <div class="navlinks">
+        <a href="#about">ABOUT</a>
+        <a href="#likes">LIKES</a>
+        <a href="#interest">INTEREST</a>
+        <a href="#goal">GOAL</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">HELLO, I'M YERIN 👋</div>
+        <h1>안녕하세요,<br>정예린입니다.</h1>
+        <p>
+          처음에는 조금 조용하고 낯을 가리지만, 친해지면 밝고 수다스러워지는 사람입니다.
+          지금은 AI와 코딩을 배우며 제가 잘할 수 있는 분야를 찾아가고 있어요.
+        </p>
+        <span class="tagline">밝고 긍정적으로, 계속 배우며 성장하기 🌱</span>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar">예</div>
+        <h2>정예린</h2>
+        <div class="sub">인공지능소프트웨어학과 2학년 · 현재 휴학 중</div>
+        <div class="info">
+          <div><b>AGE</b>21살</div>
+          <div><b>BIRTHDAY</b>3월 17일</div>
+          <div><b>LOCATION</b>대전</div>
+          <div><b>MBTI</b>INFJ / ENFJ</div>
+          <div><b>UNIVERSITY</b>한밭대학교</div>
+          <div><b>MAJOR</b>AI Software</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-desc">처음 보는 모습과 친해진 뒤의 모습이 조금 다른 편이에요.</p>
+
+      <div class="story">
+        <div class="quote">
+          “혼자 있을 때<br>가장 나답고 편하다.”
+        </div>
+        <div class="story-text">
+          <p>
+            처음 만난 사람에게는 조용하고 낯을 많이 가리는 편입니다.
+            먼저 말을 걸거나 자연스럽게 대화를 이어가는 것이 아직은 조금 어렵기도 해요.
+          </p>
+          <p>
+            하지만 친해지면 이야기가 달라집니다. 편해진 사람에게는 밝고 쫑알쫑알
+            이야기를 많이 하는 편이라 처음과 친해진 후의 모습이 꽤 다릅니다.
+          </p>
+          <p>
+            의외로 혼자 있는 시간도 좋아합니다. 사람들과 함께하는 것을 좋아해서
+            혼자 있는 것을 싫어할 것 같다는 말을 듣기도 하지만, 혼자 있을 때는
+            다른 사람의 시선을 신경 쓰지 않고 편하게 쉴 수 있어서 오히려 가장 나다운
+            모습을 느낄 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">나를 이루는 것들</h2>
+      <p class="section-desc">내 성격과 생각을 조금 더 자세히 소개해볼게요.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">☀️</div>
+          <h3>밝고 긍정적</h3>
+          <p>힘든 일이 생겨도 오래 끌고 가기보다 비교적 빨리 털어내고 다시 일상으로 돌아오는 편입니다.</p>
+        </div>
+        <div class="card">
+          <div class="icon">💬</div>
+          <h3>더 잘하고 싶은 것</h3>
+          <p>내 생각을 정리해서 사람들과 더 유연하고 조리 있게 대화하고 표현하는 능력을 키우고 싶습니다.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🤍</div>
+          <h3>소중하게 생각하는 것</h3>
+          <p>가족과 인간관계를 중요하게 생각합니다. 좋아하는 사람들과 함께하는 시간을 소중히 여깁니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="likes">
+      <h2 class="section-title">Things I Like</h2>
+      <p class="section-desc">소소하지만 확실하게 나를 행복하게 만드는 것들.</p>
+      <div class="grid">
+        <div class="card"><div class="icon">🌶️</div><h3>떡볶이 & 곱창</h3><p>맛있는 음식을 먹는 건 언제나 행복합니다.</p></div>
+        <div class="card"><div class="icon">🎧</div><h3>싱잉랩</h3><p>요즘 즐겨 듣는 음악 장르입니다.</p></div>
+        <div class="card"><div class="icon">🐶</div><h3>강아지</h3><p>보기만 해도 기분이 좋아지는 귀여운 존재.</p></div>
+      </div>
+      <div class="pill-list">
+        <span class="pill">🍂 좋아하는 계절: 가을</span>
+        <span class="pill">✈️ 하고 싶은 것: 해외여행 많이 다니기</span>
+        <span class="pill">👨‍👩‍👧‍👦 중요한 가치: 가족</span>
+        <span class="pill">🤝 중요한 가치: 인간관계</span>
+      </div>
+    </section>
+
+    <section id="interest">
+      <h2 class="section-title">My Interest</h2>
+      <p class="section-desc">요즘의 나는 새로운 것을 배우는 중입니다.</p>
+      <div class="interest">
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>AI & Coding</h3>
+          <p>
+            요즘 가장 관심 있는 분야는 AI와 코딩입니다. 프로그래밍을 더 잘하고 싶다는
+            생각이 생겨 직접 배우고 경험해보기 위해 SK알레프에 신청했습니다.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">📚</div>
+          <h3>계속 배우는 사람</h3>
+          <p>
+            한 번 배운 것에 머무르기보다 새로운 기술과 문제를 만나면서 계속 배우고
+            성장하는 사람이 되고 싶습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="goal">
+      <div class="goal">
+        <div>
+          <div class="eyebrow" style="color:#a8cbc5;">MY FUTURE</div>
+          <h2>내 분야에서는<br>자신 있는 사람이 되고 싶어요.</h2>
+          <p>
+            단순히 이것저것 조금씩 아는 사람이 아니라, 내가 선택한 분야를 깊게 공부해서
+            “이 분야는 내가 잘 안다”고 자신 있게 말할 수 있는 사람이 되는 것이 목표입니다.
+          </p>
+        </div>
+        <div>
+          <h3>내가 원하는 일의 모습</h3>
+          <ul>
+            <li>사람들과 함께 협업하기</li>
+            <li>새로운 것을 계속 배우기</li>
+            <li>반복적인 일보다 새로운 문제 만나기</li>
+            <li>내 분야의 실력을 깊게 쌓기</li>
+          </ul>
+          <div class="quote" style="margin-top:28px;background:#314b46;color:#fff;font-size:21px;">
+            “새로운 것을 배우면서<br>조금씩 성장하는 사람이 되기”
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card" style="text-align:center;padding:45px;">
+        <div class="icon">🍽️ 🎉 ❤️</div>
+        <h2 class="section-title" style="font-size:28px;">나를 행복하게 하는 순간</h2>
+        <p style="max-width:650px;margin:0 auto;color:#68756f;font-size:17px;">
+          시간과 장소에 상관없이, 내가 좋아하는 사람들과 함께 맛있는 것을 먹고
+          이야기를 나누며 재미있게 놀 때 가장 행복합니다.
+          특별한 일이 아니더라도 좋아하는 사람들과 보내는 평범한 시간이 저에게는 가장 소중합니다.
+        </p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 YERIN · 계속 배우고 성장하는 중 🌱</div>
+</footer>
+
+</body>
+</html>
